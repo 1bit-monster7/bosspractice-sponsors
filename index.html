@@ -5,30 +5,120 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>赞助名单 · BossPractice</title>
 <style>
-  :root { color-scheme: dark; background: #192335; color: #f3e8d6; font: 16px system-ui, sans-serif; }
-  main { max-width: 32rem; margin: 8vh auto; padding: 0 1rem; }
-  h1 { font-size: 1.75rem; margin-bottom: 0.8rem; }
-  table { width: 100%; border-spacing: 0 0.45rem; }
-  th, td { text-align: left; padding: 0.6rem 0.9rem; }
-  th { color: #aab7cb; font-size: 0.875rem; }
-  td { background: #222f43; }
-  td:first-child { border-radius: 0.5rem 0 0 0.5rem; }
-  td:last-child { border-radius: 0 0.5rem 0.5rem 0; color: #f3d49f; font-family: ui-monospace, monospace; }
+  body {
+    color: #f1e9da;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  }
+  h1 {
+    margin-top: 6px;
+    margin-bottom: 17px;
+    color: #f4dbad;
+    font-size: 29px;
+    font-weight: 700;
+  }
+  table { border-width: 0; border-collapse: collapse; }
+  th, td { padding: 12px 15px; }
+  th {
+    background-color: #172132;
+    color: #aab9ce;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  td {
+    background-color: #222f44;
+    color: #f1e9da;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  tbody td { border-bottom: 1px solid #354259; }
+  .number {
+    color: #efcca0;
+    font-family: Consolas, "Courier New", monospace;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+  @media (min-width: 0px) {
+    :root { color-scheme: dark; background: #101725; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      box-sizing: border-box;
+      padding: clamp(28px, 9vh, 112px) 20px 28px;
+      background:
+        radial-gradient(ellipse at 50% 0%, #3d302c 0%, transparent 45%),
+        radial-gradient(ellipse at 28% 74%, #1c2b43 0%, transparent 60%),
+        #101725;
+    }
+    .sheet {
+      position: relative;
+      box-sizing: border-box;
+      width: min(100%, 620px);
+      margin: auto;
+      padding: clamp(20px, 5vw, 42px);
+      border: 1px solid #3c4351;
+      border-radius: 24px;
+      background: linear-gradient(150deg, #202a3b, #151e2e 70%);
+      box-shadow: 0 26px 72px #070b13a8, inset 0 1px #ffffff09;
+    }
+    .sheet::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 12%;
+      right: 12%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #e1ba7a, transparent);
+    }
+    h1 {
+      position: relative;
+      margin: 0 0 29px;
+      padding: 0 0 20px;
+      font-size: clamp(27px, 6vw, 40px);
+      letter-spacing: .06em;
+      color: #f8e7c9;
+    }
+    h1::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 1px;
+      width: 42px;
+      height: 2px;
+      border-radius: 2px;
+      background: #d7aa6b;
+    }
+    table {
+      border: 1px solid #39465c;
+      border-spacing: 0;
+      border-radius: 13px;
+      overflow: hidden;
+      font-variant-numeric: tabular-nums;
+    }
+    th, td { padding: 0 clamp(12px, 3.2vw, 22px); }
+    th { height: 37px; letter-spacing: .09em; }
+    td { height: 51px; background-color: #202c40; }
+    tbody tr + tr td { border-top: 1px solid #354259; }
+    tbody tr:nth-child(even) td { background-color: #1c283b; }
+    tbody td { border-bottom: 0; }
+    .number { letter-spacing: .035em; }
+  }
 </style>
 </head>
 <body>
-<main>
+<div class="sheet">
   <h1>赞助名单</h1>
-  <table>
-    <thead><tr><th scope="col">昵称</th><th scope="col">QQ</th></tr></thead>
+  <table width="100%" border="0" cellspacing="0" cellpadding="12">
+    <thead>
+      <tr><th scope="col" align="left" width="62%">昵称</th><th scope="col" align="right">QQ</th></tr>
+    </thead>
     <tbody>
-    <tr><td>夏天</td><td>309****72</td></tr>
-    <tr><td>生鱼片</td><td>272****546</td></tr>
-    <tr><td>朦胧烟雨</td><td>265****276</td></tr>
-    <tr><td>雷欧奥特曼</td><td>294****551</td></tr>
-    <tr><td>小兄弟</td><td>260****954</td></tr>
+        <tr><td>夏天</td><td class="number" align="right">309****72</td></tr>
+        <tr><td>生鱼片</td><td class="number" align="right">272****546</td></tr>
+        <tr><td>朦胧烟雨</td><td class="number" align="right">265****276</td></tr>
+        <tr><td>雷欧奥特曼</td><td class="number" align="right">294****551</td></tr>
+        <tr><td>小兄弟</td><td class="number" align="right">260****954</td></tr>
     </tbody>
   </table>
-</main>
+</div>
 </body>
 </html>
